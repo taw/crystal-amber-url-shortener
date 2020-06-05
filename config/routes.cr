@@ -31,6 +31,7 @@ Amber::Server.configure do
     get "/", HomeController, :index
 
     resources "shortcuts", ShortcutController
+    get "/goto/:slug", GotoController, :goto
   end
 
   routes :api do
